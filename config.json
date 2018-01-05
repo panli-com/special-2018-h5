@@ -1,0 +1,19 @@
+{
+  "start": "0105",
+  "0105": {
+    "id": "546",
+    "title": "Panli代购",
+    "keywords": "",
+    "description": "",
+    "version": "0.0.1",
+    "author": "Julian",
+    "load": {
+      "css": ["./0105/src/scss/main.scss"],
+      "js": ["./libs/js/panli.js", "./libs/js/fastclick.js", "./libs/js/view-rem720.js", "./0105/src/js/main.js"]
+    },
+    "build": {
+      "css": "546.css",
+      "js": "app.js"
+    }
+  }
+}
