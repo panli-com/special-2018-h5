@@ -64,7 +64,7 @@
                           创意居家
                       </a>
                   </li>
-                  <li >
+                  <li class="">
                       <a href="javascript:void(0);">
                           爆款美妆
                       </a>
@@ -394,5 +394,18 @@
               </section>
           </div>
       </div>
-  
+      <script>
+        (function() {
+        
+            PD(".nav-box").on("click", "li", function() {
+                var navs = PD(".nav-box li").removeClass("on")
+                var vm = PD(this)
+                vm.addClass("on")
+                var floors = PD(".floor")
+                floors.hide()
+                var index = PD(this).index() + 1
+                PD("#floor_" + index).show()
+            })
+        })()
+        </script>
   </body></html>

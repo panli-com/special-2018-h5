@@ -110,4 +110,18 @@
 <script>
     FloorList(list)
 </script>
+<script>
+(function() {
+
+    PD(".nav-box").on("click", "li", function() {
+        var navs = PD(".nav-box li").removeClass("on")
+        var vm = PD(this)
+        vm.addClass("on")
+        var floors = PD(".floor")
+        floors.hide()
+        var index = PD(this).index() + 1
+        PD("#floor_" + index).show()
+    })
+})()
+</script>
 </html>

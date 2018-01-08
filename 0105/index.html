@@ -16,8 +16,8 @@
   <title>Panli代购</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <link rel="stylesheet" href="./build/css/546.css?v=1515144174141">
-  <script src="./build/css/js/app.js?v=1515144174141"></script>
+  <link rel="stylesheet" href="./build/css/546.css?v=1515377865905">
+  <script src="./build/css/js/app.js?v=1515377865905"></script>
 </head>
 <body>
 
@@ -129,5 +129,19 @@
 <script src="./data/app.js"></script>
 <script>
     FloorList(list)
+</script>
+<script>
+(function() {
+
+    PD(".nav-box").on("click", "li", function() {
+        var navs = PD(".nav-box li").removeClass("on")
+        var vm = PD(this)
+        vm.addClass("on")
+        var floors = PD(".floor")
+        floors.hide()
+        var index = PD(this).index() + 1
+        PD("#floor_" + index).show()
+    })
+})()
 </script>
 </html>
