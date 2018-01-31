@@ -1,0 +1,68 @@
+<script>
+
+var shop = [{
+  'name': '淘宝',
+  'url': 'http://m.taobao.com/',
+},{
+  'name': '天猫',
+  'url': 'http://www.tmall.com/',
+},{
+  'name': '京东',
+  'url': 'http://m.jd.com',
+},{
+  'name': '时尚起义',
+  'url': 'http://m.shishangqiyi.com/',
+},{
+  'name': '美丽说',
+  'url': 'http://m.meilishuo.com/',
+},{
+  'name': '蘑菇街',
+  'url': 'http://m.mogujie.com',
+},{
+  'name': '天猫超市',
+  'url': 'https://chaoshi.tmall.com/',
+},{
+  'name': '1号店',
+  'url': 'http://m.yhd.com',
+},{
+  'name': '当当',
+  'url': 'http://m.dangdang.com',
+},{
+  'name': '亚马逊',
+  'url': 'http://m.amazon.cn',
+}]
+
+function FloorShopList(data) {
+  var mlc = 10,
+    fl1 = [];
+  for (var i = 0; i < mlc; i++) {
+    fl0.push(data[i]);
+  }
+  FloorShopAll(fl0, 'Sportswear', 1);
+}
+
+function FloorShopAll(data, imgHead, id) {
+
+  var str = '';
+  for (var i = 0; i < data.length; i++) {
+    var url = data[i]['url'];
+    // if(data[i]['h5url']){
+    //   url = data[i]['h5url']
+    // }
+    var name = data[i]['name'];
+    var img = `./build/css/img/shop/${i+1}.png`;
+
+    str += `<li class="li_${i+1}">
+          <a href="${url}"  target="_black" title="${name}">
+            <img src="${img}" alt="${name}">
+          </a>
+        </li>`
+
+  };
+
+  var floor = PD("#floor_" + id);
+
+  floor.find('ul').html(str);
+
+}
+</script>

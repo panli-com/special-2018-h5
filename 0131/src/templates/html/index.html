@@ -1,0 +1,60 @@
+<div class="app bgcolor m-auto">
+    <section class="banner">&nbsp;</section>
+
+    <section class="nav" id="nav">
+        <ul>
+            <li class="on">柯基馆</li>
+            <li>萨摩耶馆</li>
+            <li>哈士奇馆</li>
+            <li>金毛馆</li>
+            <li>柴犬馆</li>
+        </ul>
+    </section>
+    <section class="floor-wrap">
+        <div class="floor floor1" style="display:block;">
+            <img src="./build/css/img/floor-1.png" alt="" srcset="">
+        </div>
+        <div class="floor floor2">
+            <img src="./build/css/img/floor-2.png" alt="" srcset="">
+        </div>
+        <div class="floor floor3">
+            <img src="./build/css/img/floor-3.png" alt="" srcset="">
+        </div>
+        <div class="floor floor4">
+            <img src="./build/css/img/floor-4.png" alt="" srcset="">
+        </div>
+        <div class="floor floor5">
+            <img src="./build/css/img/floor-5.png" alt="" srcset="">
+        </div>
+
+    </section>
+
+    <section class="footer">
+      <img src="./build/css/img/footer.png" alt="" srcset="">
+    </section>
+    
+    <section class="footer-cp">* 本活动最终解释权归Panli所有</section>
+</div>
+
+
+</body>
+
+
+<script>
+    (function() {
+        window.onload = function() {
+            FastClick.attach(document.body);
+        }
+
+        PD("#nav").on("click", "li", function(){
+          PD("#nav li").removeClass("on")
+          var vm = PD(this)
+          vm.addClass("on")
+          var index = vm.index()
+          PD(".floor").hide()
+          PD(".floor"+ (index+1)).show()
+        })
+    })()
+</script>
+
+</html>

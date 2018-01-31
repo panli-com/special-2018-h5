@@ -1,0 +1,80 @@
+.banner {
+  height: 607px;
+  background: url(./img/banner.png) no-repeat center center;
+  background-size: 720px 607px;
+  margin-bottom: 30px;
+}
+
+.hide {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app {
+  min-height: 100%;
+}
+
+.nav{
+  position: relative;
+  overflow: hidden;
+  background-color: #e82637;
+  color: #FFF;
+  overflow-x: scroll;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  font-size: 30px;
+  ul{
+    clear: both;
+    white-space: nowrap;
+  }
+  li{
+    display: inline-block;
+    line-height: 93px;
+    padding: 0 30px;
+    position: relative;
+    cursor: pointer;
+    &::before{
+      content: "";
+      display: none;
+      width: 33px;
+      height: 32px;
+      background: url("./img/on.png") no-repeat center center;
+      background-size: 100% 100%;
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      transform: translateY(-50%);
+    }
+    &.on{
+      background: #ffd728;
+      color: #4c1d23;
+      padding-left: 76px;
+      &::before{
+        display: block;
+      }
+    }
+  }
+}
+
+
+.floor{
+  text-align: center;
+  display: none;
+  img{
+    max-width: 100%;
+    width: 680px;
+    margin: 0 auto;
+  }
+  &-wrap{
+    padding-top: 30px;
+  }
+  &-top{
+    height: 106px;
+    background: url(./img/floor-top.png) no-repeat center center;
+    background-size: 680px 106px;
+  }
+ 
+}
