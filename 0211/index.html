@@ -12,10 +12,10 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <link rel="dns-prefetch" href="//sf.panli.com" />
   <link href="http://sf.panli.com/Ued/pc/common/images/favicon.ico?v=2016.07" type="image/ico" rel="shortcut icon" />
-  <title>2018年汪年游园会</title>
+  <title>女神节</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <link rel="stylesheet" href="./build/css/551.css?v=1518326879942">
+  <link rel="stylesheet" href="./build/css/552.css?v=1518330957522">
   <script src="http://sf.panli.com/Ued/H5/libs/app.js"></script>
   
 </head>
@@ -23,44 +23,42 @@
 
 <div class="app bgcolor m-auto">
     <section class="banner">&nbsp;</section>
-
+    <section class="time">&nbsp;</section>
     <section class="nav wrapper" id="nav">
         <div class="scroller">
             <ul class="clearfix">
                 <li class="on">
-                <a href="javascript:void(0)">柯基馆</a>
+                    <a href="javascript:void(0)">衣橱</a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)">萨摩耶馆</a>
+                    <a href="javascript:void(0)">美饰</a>
                 </li>
-                <li><a href="javascript:void(0)">哈士奇馆</a></li>
-                <li><a href="javascript:void(0)">金毛馆</a></li>
-                <li><a href="javascript:void(0)">柴犬馆</a></li>
+                <li><a href="javascript:void(0)">美妆</a></li>
+                <li><a href="javascript:void(0)">家居</a></li>
+                <li><a href="javascript:void(0)">书架</a></li>
             </ul>
         </div>
     </section>
     <section class="floor-wrap">
         <div class="floor floor1" style="display:block;">
-            <img src="./build/css/img/floor-1.png" alt="" srcset="">
+            <ul>
+            </ul>
         </div>
         <div class="floor floor2">
-            <img src="./build/css/img/floor-2.png" alt="" srcset="">
+            <ul></ul>
         </div>
         <div class="floor floor3">
-            <img src="./build/css/img/floor-3.png" alt="" srcset="">
+            <ul></ul>
         </div>
         <div class="floor floor4">
-            <img src="./build/css/img/floor-4.png" alt="" srcset="">
+            <ul></ul>
         </div>
         <div class="floor floor5">
-            <img src="./build/css/img/floor-5.png" alt="" srcset="">
+            <ul></ul>
         </div>
 
     </section>
 
-    <section class="footer">
-        <img src="./build/css/img/footer.png" alt="" srcset="">
-    </section>
 
     <section class="footer-cp">* 本活动最终解释权归Panli所有</section>
 </div>
@@ -183,6 +181,12 @@
             PD(".floor" + (index + 1)).show()
         })
     })()
+</script>
+
+<script src="./data/data.js"></script>
+<script src="./data/app.js"></script>
+<script>
+    FloorList(productData)
 </script>
 
 </body>
