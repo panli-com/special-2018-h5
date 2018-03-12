@@ -1,0 +1,145 @@
+.banner {
+  height: 553px;
+  background: url(./img/banner.png) no-repeat center center;
+  background-size: 720px 553px;
+  margin-bottom: 10px;
+}
+
+
+.hide {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app {
+  min-height: 100%;
+}
+
+
+.detail1{
+  height: 300px;
+  background: url(./img/d1.png) no-repeat center center;
+  background-size: 680px 300px;
+  margin-bottom: 30px;
+  position: relative;
+  a{
+    position: absolute;
+    display: block;
+    width: 220px;
+    height: 80px;
+    // background: darkcyan;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.detail2{
+  height: 270px;
+  background: url(./img/d2.png) no-repeat center center;
+  background-size: 680px 270px;
+  position: relative;
+  a{
+    position: absolute;
+    width: 220px;
+    height: 80px;
+    // background: darkcyan;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.floor{
+  text-align: center;
+  // display: none;
+  img{
+    max-width: 100%;
+    width: 680px;
+    margin: 0 auto;
+  }
+  &-wrap{
+    padding-top: 30px;
+  }
+  &-top{
+    height: 106px;
+    background: url(./img/floor-top.png) no-repeat center center;
+    background-size: 680px 106px;
+  }
+  ul{
+    padding-left: 20px;
+    clear: both;
+    overflow: hidden;
+  }
+  li{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .thumb{
+    width: 335px;
+    height: 330px;
+    img{
+      max-width: 100%;
+    }
+  }
+
+  .go{
+    height: 50px;
+    background: #d72108;
+    line-height: 50px;
+    text-align: center;
+    a{
+      color: #fff;
+      display: block;
+    }
+    span{
+      position: relative;
+      display: inline-block;
+      font-size: 24px;
+      &::after{
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 14px;
+        position: absolute;
+        top: 50%;
+        margin-top: -7px;
+        margin-left: 10px; 
+        background: url("./img/more.png") no-repeat center center;
+      }
+    }
+  }
+}
+
+.shop{
+  height: 99px;
+  background: #FFF url("./img/star.png") no-repeat center center;
+  background-size: 322px 99px;
+  p{
+    &:last-child{
+      height: 59px;
+      line-height: 50px;
+      font-size: 30px;
+      color: #f4270b;
+    }
+    &:first-child{
+      height: 40px;
+      line-height: 50px;
+      font-size: 22px;
+      color: #333;
+    }
+    
+  }
+}
+
+.ull{
+  display: none;
+}
+
+#ul1{
+  display: block;
+}

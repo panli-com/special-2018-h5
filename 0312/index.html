@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="yes" name="apple-touch-fullscreen" />
+  <meta content="telephone=no,email=no" name="format-detection" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="dns-prefetch" href="//sf.panli.com" />
+  <link href="http://sf.panli.com/Ued/pc/common/images/favicon.ico?v=2016.07" type="image/ico" rel="shortcut icon" />
+  <title>红包驾到</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="./build/css/555.css?v=1520838180039">
+  <script src="http://sf.panli.com/Ued/H5/libs/app.js"></script>
+  
+</head>
+<body>
+
+<div class="app bgcolor m-auto">
+    <section class="banner">&nbsp;</section>
+
+    <section class="detail detail1">
+        <a href="javascript:void(0);" onclick="LayerSpe('1')">&nbsp;</a>
+    </section>
+    <section class="detail detail2">
+        <a href="javascript:void(0);" onclick="LayerSpe('2')">&nbsp;</a>
+    </section>
+
+    <section class="floor-wrap">
+        <div class="floor floor1">
+            <ul class="ull" id="ul1"></ul>
+            <ul class="ull" id="ul2"></ul>
+            <ul class="ull" id="ul3"></ul>
+            <ul class="ull" id="ul4"></ul>
+            <ul class="ull" id="ul5"></ul>
+        </div>
+    </section>
+
+
+    <div class="Lay-wrap">
+        <div id="Lay-main-1">
+            <div class="Lay-main-1">
+                <img src="./build/css/img/lay-1.png" alt="">
+                <a href="javascript:void(0);" class="l-close"></a>
+            </div>
+        </div>
+        <div id="Lay-main-2">
+            <div class="Lay-main-2">
+                <img src="./build/css/img/lay-2.png" alt="">
+                <a href="javascript:void(0);" class="l-close"></a>
+            </div>
+        </div>
+    </div>
+
+    <section class="footer-cp">* 本活动最终解释权归Panli所有</section>
+</div>
+
+<!-- <script src="http://sf.panli.com/Ued/H5/libs/iscroll.js"></script> -->
+
+<script>
+</script>
+<script>
+    function LayerSpe(ele) {
+        var ele = "#Lay-main-" + ele;
+        var Lay = PD(ele).html();
+        PL.open({
+            type: 1,
+            title: false,
+            closeBtn: false,
+            skin: "layui-Pan-nobg", //没有背景色
+            shadeClose: true,
+            content: Lay
+        });
+        PD(".l-close").on("click", function() {
+            PL.closeAll();
+        });
+    }
+    (function() {
+        window.onload = function() {
+            FastClick.attach(document.body);
+        }
+        var page = 1
+        var maxSize = 5
+        PD(window).scroll(function() {
+            var sTop = PD(window).scrollTop()
+            var dHei = PD(document).height()
+            var wHei = PD(window).height()
+            if (sTop === dHei - wHei) {
+                if (page >= maxSize) {
+                    return
+                }
+                page++
+                console.log(page)
+                PD("#ul"+ page).show()
+            }
+        });
+    })()
+</script>
+
+<script src="./data/data.js"></script>
+<script src="./data/app.js"></script>
+<script>
+    FloorList(productData)
+</script>
+
+</body>
+</html>
