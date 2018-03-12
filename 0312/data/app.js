@@ -1,5 +1,5 @@
 function FloorList(data) {
-  var mlc = 8,
+  var mlc = 28,
     fl1 = [],
     fl2 = [],
     fl3 = [],
@@ -8,22 +8,22 @@ function FloorList(data) {
     fl6 = [],
     fl0 = [];
 
-  for (var i = 0; i < mlc + 4; i++) {
+  for (var i = 0; i < mlc ; i++) {
     fl0.push(data[i]);
   }
-  for (var i = mlc + 4; i < mlc * 2 + 4; i++) {
+  for (var i = mlc ; i < mlc * 2 ; i++) {
     fl1.push(data[i]);
   }
-  for (var i = mlc * 2 + 4; i < mlc * 3 + 4; i++) {
+  for (var i = mlc * 2 ; i < mlc * 3 ; i++) {
     fl2.push(data[i]);
   }
-  for (var i = mlc * 3 + 4; i < mlc * 4 + 4; i++) {
+  for (var i = mlc * 3 ; i < mlc * 4 ; i++) {
     fl3.push(data[i]);
   }
-  for (var i = mlc * 4 + 4; i < mlc * 5 + 4; i++) {
+  for (var i = mlc * 4 ; i < mlc * 5 ; i++) {
     fl4.push(data[i]);
   }
-  for (var i = mlc * 5 + 4; i < mlc * 6 + 4; i++) {
+  for (var i = mlc * 5 ; i < mlc * 6 ; i++) {
     fl5.push(data[i]);
   }
   // for (var i = mlc * 6; i < mlc * 7; i++) {

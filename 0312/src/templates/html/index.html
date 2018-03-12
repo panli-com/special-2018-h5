@@ -8,6 +8,8 @@
         <a href="javascript:void(0);" onclick="LayerSpe('2')">&nbsp;</a>
     </section>
 
+    <section class="l-title">&nbsp;</section>
+
     <section class="floor-wrap">
         <div class="floor floor1">
             <ul class="ull" id="ul1"></ul>
@@ -34,10 +36,8 @@
         </div>
     </div>
 
-    <section class="footer-cp">* 本活动最终解释权归Panli所有</section>
 </div>
 
-<!-- <script src="http://sf.panli.com/Ued/H5/libs/iscroll.js"></script> -->
 
 <script>
 </script>
@@ -61,18 +61,17 @@
         window.onload = function() {
             FastClick.attach(document.body);
         }
-        var page = 1
-        var maxSize = 5
+        var page = 1;
+        var maxSize = 5;
         PD(window).scroll(function() {
-            var sTop = PD(window).scrollTop()
-            var dHei = PD(document).height()
-            var wHei = PD(window).height()
+            var sTop = PD(window).scrollTop();
+            var dHei = PD(document).height();
+            var wHei = PD(window).height();
             if (sTop === dHei - wHei) {
                 if (page >= maxSize) {
                     return
                 }
-                page++
-                console.log(page)
+                page++;
                 PD("#ul"+ page).show()
             }
         });

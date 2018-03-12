@@ -62,7 +62,7 @@ a {
     margin: 0 auto;
   }
   &-wrap{
-    padding-top: 30px;
+    padding-top: 5px;
   }
   &-top{
     height: 106px;
@@ -142,4 +142,11 @@ a {
 
 #ul1{
   display: block;
+}
+
+.l-title{
+  height: 158px;
+  background: url(./img/title.png) no-repeat center center;
+  background-size: 679px 158px;
+  position: relative;
 }
