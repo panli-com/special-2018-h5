@@ -1,5 +1,21 @@
 {
-  "start": "0312",
+  "start": "0319",
+  "0319": {
+    "id": "557",
+    "title": "第二波免服务费",
+    "keywords": "",
+    "description": "",
+    "version": "0.0.1",
+    "author": "Julian",
+    "load": {
+      "css": ["./0319/src/scss/main.scss"],
+      "js": ["./libs/js/fastclick.js", "./libs/js/view-rem720.js"]
+    },
+    "build": {
+      "css": "557.css",
+      "js": "app.js"
+    }
+  },
   "0312": {
     "id": "555",
     "title": "红包驾到",
