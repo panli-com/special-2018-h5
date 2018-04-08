@@ -1,5 +1,21 @@
 {
-  "start": "0319",
+  "start": "0408",
+  "0408": {
+    "id": "559",
+    "title": "四月烘焙节",
+    "keywords": "",
+    "description": "",
+    "version": "0.0.1",
+    "author": "Julian",
+    "load": {
+      "css": ["./0408/src/scss/main.scss"],
+      "js": ["./libs/js/fastclick.js", "./libs/js/view-rem720.js"]
+    },
+    "build": {
+      "css": "559.css",
+      "js": "app.js"
+    }
+  },
   "0319": {
     "id": "557",
     "title": "第二波免服务费",
