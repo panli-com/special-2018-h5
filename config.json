@@ -1,5 +1,21 @@
 {
-  "start": "0418",
+  "start": "0507",
+  "0507": {
+    "id": "563",
+    "title": "母亲节",
+    "keywords": "",
+    "description": "",
+    "version": "0.0.1",
+    "author": "Julian",
+    "load": {
+      "css": ["./0507/src/scss/main.scss"],
+      "js": ["./libs/js/fastclick.js", "./libs/js/view-rem720.js"]
+    },
+    "build": {
+      "css": "563.css",
+      "js": "app.js"
+    }
+  },
   "0418": {
     "id": "561",
     "title": "男神节",

@@ -1,0 +1,50 @@
+.layui-layer.layui-Pan-nobg {
+  background-color: transparent;
+}
+
+.layermmain {
+  .layermchild {
+    background-color: transparent;
+  }
+}
+
+.Lay-wrap {
+  display: none;
+}
+
+.Lay-main-1,
+.Lay-main-2,
+.Lay-main-3 {
+  position: relative;
+  width: 679px;
+  display: block;
+  a {
+    display: block;
+    position: absolute;
+    height: 80px;
+    // background-color: forestgreen;
+    &.l-close {
+      right: 0;
+      top: 0;
+      width: 80px;
+      // background: red;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+.Lay-main{
+  &-1{
+    height: 502px;
+  }
+  &-2{
+    height: 472px;
+  }
+  &-3{
+    height: 383px;
+  }
+}
+
+
