@@ -1,5 +1,21 @@
 {
-  "start": "0507",
+  "start": "0612",
+  "0612": {
+    "id": "565",
+    "title": "618年中大促",
+    "keywords": "",
+    "description": "",
+    "version": "0.0.1",
+    "author": "Julian",
+    "load": {
+      "css": ["./0612/src/scss/main.scss"],
+      "js": ["./libs/js/panli.js", "./libs/js/fastclick.js", "./libs/js/view-rem720.js", "./0612/src/js/main.js"]
+    },
+    "build": {
+      "css": "565.css",
+      "js": "app.js"
+    }
+  },
   "0507": {
     "id": "563",
     "title": "母亲节",
