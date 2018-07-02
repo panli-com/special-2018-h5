@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="yes" name="apple-touch-fullscreen" />
+  <meta content="telephone=no,email=no" name="format-detection" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="dns-prefetch" href="//sf.panli.com" />
+  <link href="http://sf.panli.com/Ued/pc/common/images/favicon.ico?v=2016.07" type="image/ico" rel="shortcut icon" />
+  <title>年中热卖</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="./build/css/567.css?v=1530510263142">
+  <script src="http://sf.panli.com/Ued/H5/libs/app.js"></script>
+  
+</head>
+<body>
+
+<div class="app bgcolor m-auto">
+    <section class="banner">&nbsp;</section>
+    <section class="time">&nbsp;</section>
+    <section class="nav wrapper" id="nav">
+        <div class="scroller">
+            <ul class="clearfix">
+                <li class="on">
+                    <a href="javascript:void(0)">衣橱</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">美饰</a>
+                </li>
+                <li><a href="javascript:void(0)">美妆</a></li>
+                <li><a href="javascript:void(0)">家居</a></li>
+                <li><a href="javascript:void(0)">书架</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="floor-wrap">
+        <div class="floor floor1" style="display:block;">
+            <ul>
+            </ul>
+        </div>
+        <div class="floor floor2">
+            <ul></ul>
+        </div>
+        <div class="floor floor3">
+            <ul></ul>
+        </div>
+        <div class="floor floor4">
+            <ul></ul>
+        </div>
+        <div class="floor floor5">
+            <ul></ul>
+        </div>
+
+    </section>
+
+
+    <section class="footer-cp">* 本活动最终解释权归Panli所有</section>
+</div>
+
+<script src="http://sf.panli.com/Ued/H5/libs/iscroll.js"></script>
+
+<script>
+    (function($) {
+        $.fn.navbarscroll = function(options) {
+            //各种属性、参数
+            var _defaults = {
+                className: 'on', //当前选中点击元素的class类名
+                clickScrollTime: 300, //点击后滑动时间
+                duibiScreenWidth: 0.4, //单位以rem为准，默认为0.4rem
+                scrollerWidth: 3, //单位以px为准，默认为3,[仅用于特殊情况：外层宽度因为小数点造成的不精准情况]
+                defaultSelect: 0, //初始选中第n个，默认第0个
+                fingerClick: 0, //目标第0或1个选项触发,必须每一项长度一致，方可用此项
+                endClickScroll: function(thisObj) {} //回调函数
+            }
+            var _opt = $.extend(_defaults, options);
+            this.each(function() {
+                //插件实现代码
+                var _wrapper = $(this);
+                var _win = $(window);
+                var _win_width = _win.width(),
+                    _wrapper_width = _wrapper.width(),
+                    _wrapper_off_left = _wrapper.offset().left;
+                var _wrapper_off_right = _win_width - _wrapper_off_left - _wrapper_width;
+                var _obj_scroller = _wrapper.children('.scroller');
+                var _obj_ul = _obj_scroller.children('ul');
+                var _obj_li = _obj_ul.children('li');
+                var _scroller_w = 0;
+                _obj_li.css({
+                    "margin-left": "0",
+                    "margin-right": "0"
+                });
+                for (var i = 0; i < _obj_li.length; i++) {
+                    _scroller_w += _obj_li[i].offsetWidth;
+                }
+                _obj_scroller.width(_scroller_w + _opt.scrollerWidth);
+                var myScroll = new IScroll('#' + _wrapper.attr('id'), {
+                    eventPassthrough: true,
+                    scrollX: true,
+                    scrollY: false,
+                    preventDefault: false
+                });
+                _init(_obj_li.eq(_opt.defaultSelect));
+                _obj_li.click(function() {
+                    _init($(this));
+                });
+                //解决PC端谷歌浏览器模拟的手机屏幕出现莫名的卡顿现象，滑动时禁止默认事件（2017-01-11）
+                _wrapper[0].addEventListener('touchmove', function(e) {
+                    e.preventDefault();
+                }, false);
+
+                function _init(thiObj) {
+                    var $this_obj = thiObj;
+                    var duibi = _opt.duibiScreenWidth * _win_width / 10,
+                        this_index = $this_obj.index(),
+                        this_off_left = $this_obj.offset().left,
+                        this_pos_left = $this_obj.position().left,
+                        this_width = $this_obj.width(),
+                        this_prev_width = $this_obj.prev('li').width(),
+                        this_next_width = $this_obj.next('li').width();
+                    var this_off_right = _win_width - this_off_left - this_width;
+                    if (_scroller_w + 2 > _wrapper_width) {
+                        if (_opt.fingerClick == 1) {
+                            if (this_index == 1) {
+                                myScroll.scrollTo(-this_pos_left + this_prev_width, 0, _opt.clickScrollTime);
+                            } else if (this_index == 0) {
+                                myScroll.scrollTo(-this_pos_left, 0, _opt.clickScrollTime);
+                            } else if (this_index == _obj_li.length - 2) {
+                                myScroll.scrollBy(this_off_right - _wrapper_off_right - this_width, 0, _opt.clickScrollTime);
+                            } else if (this_index == _obj_li.length - 1) {
+                                myScroll.scrollBy(this_off_right - _wrapper_off_right, 0, _opt.clickScrollTime);
+                            } else {
+                                if (this_off_left - _wrapper_off_left - (this_width * _opt.fingerClick) < duibi) {
+                                    myScroll.scrollTo(-this_pos_left + this_prev_width + (this_width * _opt.fingerClick), 0, _opt.clickScrollTime);
+                                } else if (this_off_right - _wrapper_off_right - (this_width * _opt.fingerClick) < duibi) {
+                                    myScroll.scrollBy(this_off_right - this_next_width - _wrapper_off_right - (this_width * _opt.fingerClick), 0, _opt.clickScrollTime);
+                                }
+                            }
+                        } else {
+                            if (this_index == 1) {
+                                myScroll.scrollTo(-this_pos_left + this_prev_width, 0, _opt.clickScrollTime);
+                            } else if (this_index == _obj_li.length - 1) {
+                                if (this_off_right - _wrapper_off_right > 1 || this_off_right - _wrapper_off_right < -1) {
+                                    myScroll.scrollBy(this_off_right - _wrapper_off_right, 0, _opt.clickScrollTime);
+                                }
+                            } else {
+                                if (this_off_left - _wrapper_off_left < duibi) {
+                                    myScroll.scrollTo(-this_pos_left + this_prev_width, 0, _opt.clickScrollTime);
+                                } else if (this_off_right - _wrapper_off_right < duibi) {
+                                    myScroll.scrollBy(this_off_right - this_next_width - _wrapper_off_right, 0, _opt.clickScrollTime);
+                                }
+                            }
+                        }
+                    }
+                    $this_obj.addClass(_opt.className).siblings('li').removeClass(_opt.className);
+                    _opt.endClickScroll.call(this, $this_obj);
+                }
+            });
+        };
+    })(PD);
+</script>
+<script>
+    (function() {
+        window.onload = function() {
+            FastClick.attach(document.body);
+        }
+
+        PD('.wrapper').navbarscroll();
+
+        PD("#nav").on("click", "li", function() {
+            PD("#nav li").removeClass("on")
+            var vm = PD(this)
+            vm.addClass("on")
+            var index = vm.index()
+            PD(".floor").hide()
+            PD(".floor" + (index + 1)).show()
+        })
+    })()
+</script>
+
+<script src="./data/data.js"></script>
+<script src="./data/app.js"></script>
+<script>
+    FloorList(productData)
+</script>
+
+</body>
+</html>

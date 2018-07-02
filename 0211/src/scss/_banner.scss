@@ -1,7 +1,7 @@
 .banner {
-  height: 564px;
+  height: 581px;
   background: url(./img/banner.png) no-repeat center center;
-  background-size: 720px 564px;
+  background-size: 720px 581px;  
   margin-bottom: 10px;
 }
 
@@ -28,7 +28,7 @@ a {
 .nav{
   position: relative;
   overflow: hidden;
-  background-color: #ec426c;
+  background-color: #dc2d27;
   color: #FFF;
   // overflow-x: scroll;
   width: 100%;
@@ -54,6 +54,7 @@ a {
       display: none;
       width: 19px;
       height: 27px;
+      color: #dc2d27;
       background: url("./img/on.png") no-repeat center center;
       background-size: 100% 100%;
       position: absolute;
@@ -62,11 +63,11 @@ a {
       transform: translateY(-50%);
     }
     &.on{
-      background: #dd2f4f;
-      color: #fff;
+      background: #ffd665 ;
+      color: #dc2d27;
       a {
         margin-left: 60px;
-        color: #fff;
+        color: #dc2d27;
       }
       &::before{
         display: block;
@@ -88,7 +89,7 @@ a {
     margin: 0 auto;
   }
   &-wrap{
-    padding-top: 30px;
+    padding-top: 18px;
   }
   &-top{
     height: 106px;
@@ -107,7 +108,7 @@ a {
   }
   .thumb{
     width: 335px;
-    height: 330px;
+    height: 468px;
     img{
       max-width: 100%;
     }
@@ -160,4 +161,42 @@ a {
     }
     
   }
+}
+
+.titlebg1{
+  display: block;
+  height: 50px;
+  padding-bottom: 18px;
+  background: url(./img/title1.png) no-repeat center center;
+  background-size: 434px 43px;
+}
+.titlebg2{
+  height: 50px;
+  width: 100%;
+  padding-bottom: 18px;
+  background: url(./img/title2.png) no-repeat center center;
+  background-size: 434px 43px;
+}
+
+.titlebg3{
+  display: block;
+  height: 50px;
+  padding-bottom: 18px;
+  background: url(./img/title3.png) no-repeat center center;
+  background-size: 434px 43px;
+}
+.titlebg4{
+  height: 50px;
+  width: 100%;
+  padding-bottom: 18px;
+  background: url(./img/title4.png) no-repeat center center;
+  background-size: 434px 43px;
+}
+
+.titlebg5{
+  height: 50px;
+  width: 100%;
+  padding-bottom: 18px;
+  background: url(./img/title5.png) no-repeat center center;
+  background-size: 434px 43px;
 }

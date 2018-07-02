@@ -1,7 +1,7 @@
 {
-  "start": "0702",
+  "start": "0211",
   "0702": {
-    "id": "0702",
+    "id": "567",
     "title": "年中热卖",
     "keywords": "",
     "description": "",
@@ -113,8 +113,8 @@
     }
   },
   "0211": {
-    "id": "553",
-    "title": "女神节",
+    "id": "567",
+    "title": "年中热卖",
     "keywords": "",
     "description": "",
     "version": "0.0.1",
@@ -124,7 +124,7 @@
       "js": ["./libs/js/panli.js", "./libs/js/fastclick.js", "./libs/js/view-rem720.js", "./0211/src/js/main.js"]
     },
     "build": {
-      "css": "553.css",
+      "css": "567.css",
       "js": "app.js"
     }
   },

@@ -1,5 +1,5 @@
 function FloorList(data) {
-  var mlc = 8,
+  var mlc = 12,
     fl1 = [],
     fl2 = [],
     fl3 = [],
@@ -8,24 +8,24 @@ function FloorList(data) {
     fl6 = [],
     fl0 = [];
 
-  for (var i = 0; i < mlc + 4; i++) {
+  for (var i = 0; i < mlc; i++) {
     fl0.push(data[i]);
   }
-  for (var i = mlc + 4; i < mlc * 2 + 4; i++) {
+  for (var i = mlc; i < mlc * 2; i++) {
     fl1.push(data[i]);
   }
-  for (var i = mlc * 2 + 4; i < mlc * 3 + 4; i++) {
+  for (var i = mlc * 2 ; i < mlc * 3; i++) {
     fl2.push(data[i]);
   }
-  for (var i = mlc * 3 + 4; i < mlc * 4 + 4; i++) {
+  for (var i = mlc * 3 ; i < mlc * 4; i++) {
     fl3.push(data[i]);
   }
-  for (var i = mlc * 4 + 4; i < mlc * 5 + 4; i++) {
+  for (var i = mlc * 4; i < mlc * 5; i++) {
     fl4.push(data[i]);
   }
-  for (var i = mlc * 5 + 4; i < mlc * 6 + 4; i++) {
-    fl5.push(data[i]);
-  }
+  // for (var i = mlc * 5 + 4; i < mlc * 6 + 4; i++) {
+  //   fl5.push(data[i]);
+  // }
   // for (var i = mlc * 6; i < mlc * 7; i++) {
   //     fl6.push(data[i]);
   // }
@@ -42,11 +42,11 @@ function FloorList(data) {
 function FloorAll(data, imgHead, id) {
   var str = "";
   for (var i = 0; i < data.length; i++) {
-    var name = data[i].店铺名称,
-      price = data[i].价格,
-      imgUrl = "./build/css/img/list/" + data[i].图片名称,
-      Url = data[i].商品导购,
-      shopUrl = data[i].店铺链接;
+    // var name = data[i].店铺名称,
+    //   price = data[i].价格,
+      imgUrl = "./build/css/img/list/" + id + '-' + (i+1) + '.png';
+    var Url = data[i].链接;
+    // var shopUrl = data[i].店铺链接;
 
     str += `
       <li>
@@ -55,17 +55,7 @@ function FloorAll(data, imgHead, id) {
                             <img src="${imgUrl}" alt="" srcset="">
                         </a>
                     </div>
-                    <div class="shop">
-                        <a href="${shopUrl}"  target="_blank">
-                            <p>${name}</p>
-                            <p>满399减100</p>
-                        </a>
-                    </div>
-                    <div class="go">
-                        <a href="${shopUrl}"  target="_blank">
-                            <span>进店疯抢</span>
-                        </a>
-                    </div>
+                    
                 </li>
       `;
   }
