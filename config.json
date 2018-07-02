@@ -1,5 +1,21 @@
 {
-  "start": "0612",
+  "start": "0702",
+  "0702": {
+    "id": "0702",
+    "title": "年中热卖",
+    "keywords": "",
+    "description": "",
+    "version": "0.0.1",
+    "author": "Julian",
+    "load": {
+      "css": ["./0702/src/d/main.scss"],
+      "js": ["./libs/js/panli.js", "./libs/js/fastclick.js", "./libs/js/view-rem720.js", "./0702/src/js/main.js"]
+    },
+    "build": {
+      "css": "567.css",
+      "js": "app.js"
+    }
+  },
   "0612": {
     "id": "565",
     "title": "618年中大促",
