@@ -707,7 +707,24 @@
         };
     })(PD);
 </script>
+<script>
+    (function() {
+        window.onload = function() {
+            FastClick.attach(document.body);
+        }
 
+        PD('.wrapper').navbarscroll();
+
+        PD("#nav").on("click", "li", function() {
+            PD("#nav li").removeClass("on")
+            var vm = PD(this)
+            vm.addClass("on")
+            var index = vm.index()
+            PD(".floor").hide()
+            PD(".floor" + (index + 1)).show()
+        })
+    })()
+</script>
 
 </body>
 </html>

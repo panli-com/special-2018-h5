@@ -1,5 +1,21 @@
 {
-  "start": "0211",
+  "start": "0829",
+  "0829": {
+    "id": "569",
+    "title": "开学",
+    "keywords": "",
+    "description": "",
+    "version": "0.0.1",
+    "author": "Julian",
+    "load": {
+      "css": ["./0829/src/scss/main.scss"],
+      "js": ["./libs/js/panli.js", "./libs/js/fastclick.js", "./libs/js/view-rem720.js", "./0829/src/js/main.js"]
+    },
+    "build": {
+      "css": "569.css",
+      "js": "app.js"
+    }
+  },
   "0702": {
     "id": "567",
     "title": "年中热卖",
@@ -8,7 +24,7 @@
     "version": "0.0.1",
     "author": "Julian",
     "load": {
-      "css": ["./0702/src/d/main.scss"],
+      "css": ["./0702/src/scss/main.scss"],
       "js": ["./libs/js/panli.js", "./libs/js/fastclick.js", "./libs/js/view-rem720.js", "./0702/src/js/main.js"]
     },
     "build": {
