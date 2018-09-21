@@ -1,0 +1,36 @@
+body{
+  font-size: 12px; /*no*/
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+  *zoom: 1;
+}
+
+.bgcolor {
+  background: #f5575f; 
+} 
+
+.center {
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}

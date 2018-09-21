@@ -1,0 +1,23 @@
+
+/*滚动条整体部分,必须要设置*/
+::-webkit-scrollbar{
+  width: 15px;
+  height: 5px;
+  background-color: #999;
+}
+/*滚动条的轨道*/
+::-webkit-scrollbar-track{
+  box-shadow: none;
+  background-color: rgba(103, 104, 125, 0.5);
+}
+/*滚动条的滑块按钮*/
+::-webkit-scrollbar-thumb{
+  border-radius: 15px;
+  background-color: #eee;
+  box-shadow: none;
+}
+/*滚动条的上下两端的按钮*/
+::-webkit-scrollbar-button{
+  height: 14px;
+  background-color: #67687D;
+}
